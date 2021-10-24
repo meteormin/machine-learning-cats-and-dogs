@@ -1,0 +1,11 @@
+.idea
+my_cats_and_dogs_chart
+chart
+cats_and_dogs
+evaluate
+cats_and_dogs_script.py
+cnn.py
+*.jpg
+*.png
+*.json
+*.csv
