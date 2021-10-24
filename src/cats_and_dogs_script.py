@@ -110,10 +110,10 @@ if __name__ == '__main__':
 
     dropout_list = [0.3]
     lr_list = [0.0007]
-    epoch_list = [10, 20, 30, 35]
+    epoch_list = [30, 35]
 
     # final...
-    SEQ: int = 550
+    SEQ: int = 552
 
     for dr in dropout_list:
         for lr in lr_list:
