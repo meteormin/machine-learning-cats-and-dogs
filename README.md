@@ -53,5 +53,6 @@
 
 ![dropout_acc](./report/dropout_acc.png)
 
+![dropout_and_learning_rate_acc](./report/dropout_and_learning_rate_acc.png)
 
 ### predict
