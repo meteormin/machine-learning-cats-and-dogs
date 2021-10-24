@@ -3,6 +3,5 @@ my_cats_and_dogs_chart
 cats_and_dogs_script.py
 cnn.py
 *.jpg
-*.png
 *.json
 *.csv
