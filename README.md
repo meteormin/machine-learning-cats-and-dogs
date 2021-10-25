@@ -59,7 +59,7 @@ dropout
 ![dropout_acc](./report/dropout_acc.png)
 
 - 기본적으로 높아질 수록 성능이 떨어지는 것으로 보인다.
-- dropout 수치에 10을 곱하여 홀수이면 성능이 낮았고 짝수면 성능이 올라갔다.
+- dropout 수치에 10을 곱하여 짝수이면 성능이 낮았고 홀수면 성능이 올라갔다.
 
 learning rate
 
