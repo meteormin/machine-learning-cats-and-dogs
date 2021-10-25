@@ -45,7 +45,7 @@
 |------|---|---|
 |dropout|0.1, 0.2, 0.3, 0.4, 0.5|0.3|
 |learning rate|0.0001, 0.0003, 0.0005, 0.0007, 0.001, 0.003|0.0007|
-|epoch|10, 20, 30, 35|35|
+|epoch|10, 20, 30, 35, 40, 50|40|
 
 ### Chart
 
@@ -54,5 +54,7 @@
 ![dropout_acc](./report/dropout_acc.png)
 
 ![dropout_and_learning_rate_acc](./report/dropout_and_learning_rate_acc.png)
+
+![epoch_acc](./report/epoch_acc.png)
 
 ### predict

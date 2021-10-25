@@ -107,13 +107,15 @@ if __name__ == '__main__':
     # 2021.10.24
     # 현재 가장 높은 정확도
     # learning_rate 0.0007
+    # dropout 0.3
+    # epoch
 
     dropout_list = [0.3]
     lr_list = [0.0007]
-    epoch_list = [30, 35]
+    epoch_list = [40]
 
     # final...
-    SEQ: int = 552
+    SEQ: int = 0
 
     for dr in dropout_list:
         for lr in lr_list:
