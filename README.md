@@ -55,24 +55,28 @@
 ### Uniqueness
 
 dropout
+
 ![dropout_acc](./report/dropout_acc.png)
 
 - 기본적으로 높아질 수록 성능이 떨어지는 것으로 보인다.
 - dropout 수치에 10을 곱하여 홀수이면 성능이 낮았고 짝수면 성능이 올라갔다.
 
 learning rate
+
 ![lr_acc](./report/learning_rate_acc.png)
 
 - 0.001보다 작거나 같은 경우에 높은 성능을 보인다.
 - 조정 시, 0.0001 단위로 조정하여 적합한 값을 찾는 것이 좋아 보인다.
 
 learning rate & dropout
+
 ![dropout_and_learning_rate_acc](./report/dropout_and_learning_rate_acc.png)
 
 - dropout과 learning rate와의 상관관계를 분석하고자 하였다.
 - 두 변수는 서로에게 미치는 영향이 거의 없다고 판단된다.
 
 epoch
+
 ![epoch_acc](./report/epoch_acc.png)
 
 - 40회까지는 횟수에 비례하여 성능이 상승한다.
