@@ -101,6 +101,7 @@ epoch
 > 
 > ![epoch_60](./report/cnn_dr=0.3_lr=0.0007_ep=60_acc.png)
 > ![epoch_60_loss](./report/cnn_dr=0.3_lr=0.0007_ep=60_loss.png)
+> 
 > epoch = 70
 > 
 > ![epoch_70](./report/cnn_dr=0.3_lr=0.0007_ep=70_acc.png)
@@ -109,7 +110,9 @@ epoch
 ### Predict
 
 > learning rate: 0.0007
+> 
 > dropout: 0.3
+> 
 > epoch: 40
 
 - [555.csv](./report/555.csv)
