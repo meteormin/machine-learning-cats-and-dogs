@@ -22,39 +22,86 @@
 
 ## Experiment
 
-### example(Jupyter Notebook)
+### Example(Jupyter Notebook)
 
 - [cats_and_dogs.ipynb](./cats_and_dogs.ipynb)
 
-### reporting source
+### Reporting source
 
 - [cats_and_dogs_script.py](./src/cats_and_dogs_script.py)
 - [cnn.py(class)](./src/cnn.py)
 
 ## Report
 
-### 실험 환경
+### Experiment Result
+
+- 2021.10.25
+    - 92.65%
+
+### Experiment Environment
 
 - windows 10
 - anaconda3, python 3.9
 - tensorflow 2.5.0
 
-### 하이퍼 파라미터
+### Hyper Parameters
 
 |파라미터|실험 값|최적 값|
 |------|---|---|
 |dropout|0.1, 0.2, 0.3, 0.4, 0.5|0.3|
 |learning rate|0.0001, 0.0003, 0.0005, 0.0007, 0.001, 0.003|0.0007|
-|epoch|10, 20, 30, 35, 40, 50|40|
+|epoch|10, 20, 30, 35, 40, 50, 60, 70|40|
 
-### Chart
+### Uniqueness
 
-![lr_acc](./report/learning_rate_acc.png)
-
+dropout
 ![dropout_acc](./report/dropout_acc.png)
 
+- 기본적으로 높아질 수록 성능이 떨어지는 것으로 보인다.
+- dropout 수치에 10을 곱하여 홀수이면 성능이 낮았고 짝수면 성능이 올라갔다.
+
+learning rate
+![lr_acc](./report/learning_rate_acc.png)
+
+- 0.001보다 작거나 같은 경우에 높은 성능을 보인다.
+- 조정 시, 0.0001 단위로 조정하여 적합한 값을 찾는 것이 좋아 보인다.
+
+learning rate & dropout
 ![dropout_and_learning_rate_acc](./report/dropout_and_learning_rate_acc.png)
 
+- dropout과 learning rate와의 상관관계를 분석하고자 하였다.
+- 두 변수는 서로에게 미치는 영향이 거의 없다고 판단된다.
+
+epoch
 ![epoch_acc](./report/epoch_acc.png)
 
-### predict
+- 40회까지는 횟수에 비례하여 성능이 상승한다.
+- 50회부터는 오히려 성능이 줄어들기 시작하며, 과적합 현상을 보인다.
+
+### Limitations of Experiments
+
+1. 결정적으로 표본의 수가 많이 부족하다. 생각보다 CNN 이미지 학습에 소요되는 시간이 너무 컸다.
+2. 각 epoch에 따른 학습 곡선이 명확하게 과적합인지 판단하기 어려웠다. validation 결과의 오차 범위가 너무 큰 것으로 보인다.
+
+> epoch = 40
+> ![epoch_40](./report/cnn_dr=0.3_lr=0.0007_ep=40_acc.png)
+> ![epoch_40_loss](./report/cnn_dr=0.3_lr=0.0007_ep=40_loss.png)
+>
+> epoch = 50
+> ![epoch_50](./report/cnn_dr=0.3_lr=0.0007_ep=50_acc.png)
+> ![epoch_50_loss](./report/cnn_dr=0.3_lr=0.0007_ep=50_loss.png)
+>
+> epoch = 60
+> ![epoch_60](./report/cnn_dr=0.3_lr=0.0007_ep=60_acc.png)
+> ![epoch_60_loss](./report/cnn_dr=0.3_lr=0.0007_ep=60_loss.png)
+> epoch = 70
+> ![epoch_70](./report/cnn_dr=0.3_lr=0.0007_ep=70_acc.png)
+> ![epoch_70_loss](./report/cnn_dr=0.3_lr=0.0007_ep=70_loss.png)
+
+### Predict
+
+> learning rate: 0.0007
+> dropout: 0.3
+> epoch: 40
+
+- [555.csv](./report/555.csv)
