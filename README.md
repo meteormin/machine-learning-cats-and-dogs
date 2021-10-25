@@ -88,17 +88,21 @@ epoch
 2. 각 epoch에 따른 학습 곡선이 명확하게 과적합인지 판단하기 어려웠다. validation 결과의 오차 범위가 너무 큰 것으로 보인다.
 
 > epoch = 40
+> 
 > ![epoch_40](./report/cnn_dr=0.3_lr=0.0007_ep=40_acc.png)
 > ![epoch_40_loss](./report/cnn_dr=0.3_lr=0.0007_ep=40_loss.png)
 >
 > epoch = 50
+> 
 > ![epoch_50](./report/cnn_dr=0.3_lr=0.0007_ep=50_acc.png)
 > ![epoch_50_loss](./report/cnn_dr=0.3_lr=0.0007_ep=50_loss.png)
 >
 > epoch = 60
+> 
 > ![epoch_60](./report/cnn_dr=0.3_lr=0.0007_ep=60_acc.png)
 > ![epoch_60_loss](./report/cnn_dr=0.3_lr=0.0007_ep=60_loss.png)
 > epoch = 70
+> 
 > ![epoch_70](./report/cnn_dr=0.3_lr=0.0007_ep=70_acc.png)
 > ![epoch_70_loss](./report/cnn_dr=0.3_lr=0.0007_ep=70_loss.png)
 
