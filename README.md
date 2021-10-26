@@ -44,6 +44,27 @@
 - anaconda3, python 3.9
 - tensorflow 2.5.0
 
+### Model Configuration
+
+**Layer 구성**
+
+|항목|값|비고| 
+|------|---|---| 
+|Input Nodes|49152|128(px)*128(px)*3(RGB)| 
+|Convolutional Layer|filter=32,64,128,128, size=3*3|총 4개로 구성| 
+|Pooling Layer|Max Pooling 2*2|총 4개로 구성| 
+|Batch Normalization|4번의 배치 정규화|| |Hidden Layer|512|| 
+|DropoutLayer|1개|| 
+|activation function|relu, sigmoid|기본적으로 relu 함수를 사용하면서, 마지막 output layer에서 sigmoid 함수를 사용했다.|
+|Output Nodes|2|0:cat,1:dog||
+
+**compile 관련**
+
+|항목|값|비고|
+|------|---|---|
+|Optimizer|[RMSprop](https://ko.coursera.org/lecture/deep-neural-network/rmsprop-BhJlm)|지수 이동평균을 이용한 가중치 계산 알고리즘|
+|Loss|binary_crossentropy|손실 함수로 결과가 0 or 1 이면서 Output Layer가 sigmoid이면 사용한다고 한다..|
+
 ### Hyper Parameters
 
 |파라미터|실험 값|최적 값|
